@@ -32,7 +32,9 @@
         <link href="https://lffsantos.github.io/itindublin.github.io/theme/css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="https://lffsantos.github.io/itindublin.github.io/theme/css/pygments/perldoc.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-        <link href="/theme/css/article.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://lffsantos.github.io/itindublin.github.io/theme/css/article.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://lffsantos.github.io/itindublin.github.io/theme/css/wiki.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="https://lffsantos.github.io/itindublin.github.io/theme/tipuesearch/tipuesearch.css">
 
         <style type="text/css">
           .hero {
@@ -126,6 +128,7 @@
         </header>
         <main>
             <!-- Content -->
+
   <div class="container">
 
     <div class="row">
@@ -143,12 +146,24 @@
         <a class="grey-text text-darken-1" title="wiki|escape" href="https://lffsantos.github.io/itindublin.github.io/wiki">wiki</a>
         </li>
         <li class="grey-text text-lighten-1">Páginas da Wiki</li>
-</ul>                <hr>
+</ul>
+                <div align="center">
+                    <input type="text" size="60" id="tipue_search_input">
+                    <input type="button" id="tipue_search_button" value="Search" disabled>
+                </div>
+                <div id="tipue_search_content"></div>
+                <hr>
+
                     <h1 style="padding: 0px 50px">Páginas da Wiki</h1>
                 <div class="article-contents">
                     <ul style="line-height: 1em !important;">
                         <li>
-                            <a href="https://lffsantos.github.io/itindublin.github.io/teste"> Teste</a>
+                            <a href="https://lffsantos.github.io/itindublin.github.io/duvidas-sobre-visto"> Dúvidas sobre visto</a>
+                        </li>
+                    </ul>
+                    <ul style="line-height: 1em !important;">
+                        <li>
+                            <a href="https://lffsantos.github.io/itindublin.github.io/regras-do-grupo"> Regras do Grupo</a>
                         </li>
                     </ul>
                 </div>
@@ -214,10 +229,23 @@
     </div>
 </footer>
             <!-- Scripts -->
-            <script src="https://lffsantos.github.io/itindublin.github.io/theme/js/jquery-2.1.1.min.js"></script>
+              <script src="https://lffsantos.github.io/itindublin.github.io/theme/js/jquery-2.1.1.min.js"></script>
             <script src="https://lffsantos.github.io/itindublin.github.io/theme/js/materialize.min.js"></script>
             <script src="https://lffsantos.github.io/itindublin.github.io/theme/js/parallax.js"></script>
             <script src="https://lffsantos.github.io/itindublin.github.io/theme/js/init.js"></script>
+
+    <script type="text/javascript" src="https://lffsantos.github.io/itindublin.github.io/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="https://lffsantos.github.io/itindublin.github.io/theme/tipuesearch/tipuesearch.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+         $('#tipue_search_input').tipuesearch({
+             'show': 10,
+             'mode': 'json',
+             'contentLocation': 'https://lffsantos.github.io/itindublin.github.io/tipuesearch_content.json'
+         });
+    });
+    </script>
         </main>
     </body>
 </html>
