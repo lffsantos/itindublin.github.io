@@ -5,93 +5,142 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.2</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/archives.html</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.2</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/como-contribuir-com-a-wiki</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/como-publicar-um-artigo</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/comunidade</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/duvidas-sobre-visto</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/eventos</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/index</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/lista-de-discussoes</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/membros</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/regras-do-grupo</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/search</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>https://lffsantos.github.io/itindublin.github.io/wiki</loc>
-<lastmod>2016-09-28T08:18:24-00:00</lastmod>
+<lastmod>2016-09-28T18:28:29-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
+</url>
+
+<url>
+<loc>https://lffsantos.github.io/itindublin.github.io/blog/primeiro-artigo</loc>
+<lastmod>2016-09-28T14:57:00+02:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://lffsantos.github.io/itindublin.github.io/blog/categorias/teste</loc>
+<lastmod>2016-09-28T14:57:00+00:09</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.2</priority>
+</url>
+
+<url>
+<loc>https://lffsantos.github.io/itindublin.github.io/blog/tags/pelican</loc>
+<lastmod>2016-09-28T14:57:00+00:09</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.2</priority>
+</url>
+
+<url>
+<loc>https://lffsantos.github.io/itindublin.github.io/blog/tags/tecnico</loc>
+<lastmod>2016-09-28T14:57:00+00:09</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.2</priority>
+</url>
+
+<url>
+<loc>https://lffsantos.github.io/itindublin.github.io/blog/tags/tutorial</loc>
+<lastmod>2016-09-28T14:57:00+00:09</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.2</priority>
+</url>
+
+<url>
+<loc>https://lffsantos.github.io/itindublin.github.io/blog/tags/site</loc>
+<lastmod>2016-09-28T14:57:00+00:09</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.2</priority>
+</url>
+
+<url>
+<loc>https://lffsantos.github.io/itindublin.github.io/blog/autores/lucas-farias</loc>
+<lastmod>2016-09-28T14:57:00+00:09</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.2</priority>
 </url>
 
 </urlset>
