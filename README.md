@@ -56,7 +56,7 @@ as instruções abaixo para rodar o projeto na sua máquina.
 
 Criar o ambiente de uso do Pelican é muito simples, pra isso você vai precisar de:
 
-- Python 2.7;
+- Python 3.5;
 - VirtualEnv;
 
 Primeiro abra um terminal e crie um [virtualenv][https://virtualenv.readthedocs.io/en/latest/]

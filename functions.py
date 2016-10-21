@@ -157,9 +157,9 @@ def get_avatar(autor, membros):
         return "/theme/img/{}".format("default_avatar.gif")
 
     link_img = {
-        'github': "https://avatars.githubusercontent.com/{}?size=250",
-        'email': "http://www.gravatar.com/avatar/{}?s=250",
-        'twitter': "http://avatars.io/twitter/{}",
+        'github': "https://avatars.githubusercontent.com/{}?size=100",
+        'email': "http://www.gravatar.com/avatar/{}?s=100",
+        'twitter': "http://avatars.io/twitter/{}?size=100",
     }
     url_img = None
     for account, username in membros['autor'].items():

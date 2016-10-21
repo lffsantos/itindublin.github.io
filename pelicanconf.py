@@ -13,8 +13,8 @@ from collections import OrderedDict
 AUTHOR = u'ItInDublinBR'
 SITENAME = u'IT In Dublin - BR'
 SITEURL = ''
-API_SERVICE = 'https://itindublin-service-api.herokuapp.com/api/v1'
-# API_SERVICE = 'http://localhost:5000/api/v1'
+# API_SERVICE = 'https://itindublin-service-api.herokuapp.com/api/v1'
+API_SERVICE = 'http://localhost:5000/api/v1'
 
 META_DESCRIPTION = '''Esta é uma iniciativa coletiva com o intuito de compartilhar
                       conhecimento e experiências sobre a área e o mercado.
