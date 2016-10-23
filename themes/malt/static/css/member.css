@@ -17,6 +17,10 @@
   height: 500px;
 }
 
+ul.dropdown-content.select-dropdown li span {
+    color: #000; /* no need for !important :) */
+    font-size: 14px;
+}
 @media (max-width: 992px) {
   h1 {
     font-size: 3.5rem;

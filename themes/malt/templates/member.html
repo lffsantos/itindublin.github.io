@@ -19,104 +19,111 @@
 {% endblock %}
 
 {% block content %}
-<div class="container content-container">
+<div class="container content-container members">
     <h1 class="center">Cadastro</h1>
-    <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="full_name" type="text" class="validate">
-              <label for="full_name">Nome Completo</label>
-            </div>
-            <div class="input-field col s3">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="short_name" type="text" class="validate">
-              <label for="short_name">Apelido</label>
-            </div>
-            <div class="input-field col s3">
-                <input name="group1" type="radio" id="gender1" />
-                  <label for="gender1">Masculino</label>
-                 <input name="group1" type="radio" id="gender2" />
-                  <label for="gender2">Feminino</label>
-            </div>
-            </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">email</i>
-              <input id="email" type="email" class="validate">
-              <label for="email" data-error="wrong" data-success="right">Email</label>
-            </div>
-            <div class="input-field col s3">
-              <i class="material-icons prefix">phone</i>
-              <input id="phone" type="tel" class="validate">
-              <label for="phone">Telefone</label>
-            </div>
-            <div class="input-field col s3">
-              <input type="date" id="birth" class="datepicker"/>
-              <label for="birth">Data de Nascimento</label>
-            </div>
+        <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="full_name" type="text" class="validate">
+                  <label for="full_name">Nome Completo</label>
+                </div>
+                <div class="input-field col s3">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="short_name" type="text" class="validate">
+                  <label for="short_name">Apelido</label>
+                </div>
+                <div class="input-field col s3">
+                    <input name="group1" type="radio" value="1" id="gender1" checked/>
+                      <label for="gender1">Masculino</label>
+                    <input name="group1" type="radio" value="2" id="gender2" />
+                      <label for="gender2">Feminino</label>
+                </div>
+                </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" class="validate">
+                  <label for="email" data-error="wrong" data-success="right">Email</label>
+                </div>
+                <div class="input-field col s3">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="phone" type="tel" class="validate">
+                  <label for="phone">Telefone</label>
+                </div>
+                <div class="input-field col s3">
+                  <input type="date" id="birth" class="datepicker"/>
+                  <label for="birth">Data de Nascimento</label>
+                </div>
 
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <textarea id="about" class="materialize-textarea"></textarea>
-              <label for="about">Sobre</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="linkedin" type="text" class="validate">
-              <label for="linkedin">Linkedin</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="github" type="text" class="validate">
-              <label for="github">GitHub</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s3">
-                <select id="time_experience" >
-                    <option value="" disabled selected>Choose your option</option>
-                </select>
-                <label>Tempo de Experiência</label>
-            </div>
-            <div class="input-field col s3">
-                <select id="education">
-                    <option value="" disabled selected>Choose your option</option>
-                </select>
-                <label>Educação</label>
-            </div>
-            <div class="input-field col s3">
-                <select id="course">
-                    <option value="" disabled selected>Choose your option</option>
-                </select>
-                <label>Curso</label>
-            </div>
-            <div class="input-field col s3">
-                <select id="visa">
-                    <option value="" disabled selected>Choose your option</option>
-                </select>
-                <label>Visto</label>
-            </div>
-          </div>
-          <div class="row">
-              <div class="input-field col s3">
-                <select id="occupation">
-                    <option value="" disabled selected>Choose your option</option>
-                </select>
-                <label>Área de Atuação</label>
-            </div>
-               <label>Tecnologias</label>
-             <div class="input-field col s9">
-                 <textarea id="technologies" class="materialize-textarea" style="width: 400px !important;">
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="about" class="materialize-textarea"></textarea>
+                  <label for="about">Sobre</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s5">
+                  <input id="linkedin" type="text" class="validate">
+                  <label for="linkedin">Linkedin</label>
+                </div>
+                <div class="input-field col s5">
+                  <input id="github" type="text" class="validate">
+                  <label for="github">GitHub</label>
+                </div>
+                <div class="input-field col s2">
+                   <input type="checkbox" class="filled-in" id="is_working"/>
+                   <label for="is_working">Working?</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s3">
+                    <select id="time_experience">
+                        <option value="0" disabled selected>Choose your option</option>
+                    </select>
+                    <label>Tempo de Experiência</label>
+                </div>
+                <div class="input-field col s3">
+                    <select id="education">
+                        <option value="0" disabled selected>Choose your option</option>
+                    </select>
+                    <label>Educação</label>
+                </div>
+                <div class="input-field col s3">
+                    <select id="course">
+                        <option value="0" disabled selected>Choose your option</option>
+                    </select>
+                    <label>Curso</label>
+                </div>
+                <div class="input-field col s3">
+                    <select id="visa">
+                        <option value="0" disabled selected>Choose your option</option>
+                    </select>
+                    <label>Visto</label>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="input-field col s3">
+                    <select id="occupation">
+                        <option value="0" disabled selected>Choose your option</option>
+                    </select>
+                    <label>Área de Atuação</label>
+                </div>
+                   <label>Tecnologias</label>
+                 <div class="input-field col s9">
+                     <textarea id="technologies" class="materialize-textarea" style="width: 400px !important;">
 
-                 </textarea>
-             </div>
-          </div>
-        </form>
+                     </textarea>
+                 </div>
+              </div>
+            </form>
+        </div>
+         <button class="btn center" type="submit" name="action" onclick="pageMember.save_member('{{ API_SERVICE }}');">Submit
+         </button>
+
     </div>
-</div>
     {% block post_content %}{% endblock %}
         {% block scripts %}
         {{ super() }}
@@ -129,15 +136,10 @@
         <script src="{{ SITEURL }}/theme/itindublin/js/member.js"></script>
     {% endblock %}
     <script>
-        var pageMember = PageMembers.init('{{ API_SERVICE }}');
-        var $input = $('.datepicker').pickadate();
-        var picker = $input.pickadate('picker');
-        picker.set('max', true);
-
+        var pageMember = PageMembersRegister;
+        pageMember.init('{{ API_SERVICE }}');
         $(document).ready(function() {
             $('select').material_select();
-          });
-
-
+        });
     </script>
 {% endblock %}
