@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link href="{{ SITEURL }}/theme/css/member.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ SITEURL }}/theme/itindublin/css/member-list.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+{% endblock %}
+
+{% block bannertext %}
+<h1>{{ page.title }}</h1>
+{% endblock %}
+
+{% block navbar %}
+    {% include "includes/navbar-home.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="container content-container">
+    <div ng-app="myApp"  ng-controller="myCtrl" class="row">
+        <!-- author -->
+        <div class="col l3 m4 s6" ng-repeat="name in names">
+             <div class="card hoverable small dev-card" id="lffsantos" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url(https://avatars.githubusercontent.com/lffsantos?size=100) repeat scroll 0 0;">
+                <div class="card-image">
+                    <span class="card-title">{[{ name }]}</span>
+                </div>
+                <div class="card-action">
+                    <a title="GitHub" href="http://github.com/lffsantos"><i class="fa fa-github"></i></a>
+                    <a title="linkedin" href="http://twitter.com/lffsantos"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+        {{ super() }}
+        <script src="{{ SITEURL }}/theme/itindublin/js/member.js"></script>
+
+        <script>
+            var pageMember = PageMemberList;
+            pageMember.init('{{ API_SERVICE }}');
+            var app = angular.module('myApp', []);
+            app.config(['$interpolateProvider', function($interpolateProvider) {
+              $interpolateProvider.startSymbol('{[{');
+              $interpolateProvider.endSymbol('}]}');
+            }]);
+            app.controller('myCtrl', ['$scope',function($scope) {
+                $scope.names = ["John Doe", 'lucas'];
+                $scope.name = 'dasdas';
+            }]);
+
+        </script>
+{% endblock %}
