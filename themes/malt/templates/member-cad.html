@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link href="{{ SITEURL }}/theme/css/member.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/plugins/textext/css/textext.core.css" type="text/css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/plugins/textext/css/textext.plugin.tags.css" type="text/css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/plugins/textext/css/textext.plugin.autocomplete.css" type="text/css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/plugins/textext/css/textext.plugin.focus.css" type="text/css" />
+
+{% endblock %}
+
+{% block bannertext %}
+<h1>{{ page.title }}</h1>
+{% endblock %}
+
+{% block navbar %}
+    {% include "includes/navbar-home.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="container content-container members">
+    <h1 class="center">Cadastro</h1>
+        <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="full_name" type="text" class="validate">
+                  <label for="full_name">Nome Completo</label>
+                </div>
+                <div class="input-field col s3">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="short_name" type="text" class="validate">
+                  <label for="short_name">Apelido</label>
+                </div>
+                <div class="input-field col s3">
+                    <input name="group1" type="radio" value="1" id="gender1" checked/>
+                      <label for="gender1">Masculino</label>
+                    <input name="group1" type="radio" value="2" id="gender2" />
+                      <label for="gender2">Feminino</label>
+                </div>
+                </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" class="validate">
+                  <label for="email" data-error="wrong" data-success="right">Email</label>
+                </div>
+                <div class="input-field col s3">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="phone" type="tel" class="validate">
+                  <label for="phone">Telefone</label>
+                </div>
+                <div class="input-field col s3">
+                  <input type="date" id="birth" class="datepicker"/>
+                  <label for="birth">Data de Nascimento</label>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="about" class="materialize-textarea"></textarea>
+                  <label for="about">Sobre</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s5">
+                  <input id="linkedin" type="text" class="validate">
+                  <label for="linkedin">Linkedin</label>
+                </div>
+                <div class="input-field col s5">
+                  <input id="github" type="text" class="validate">
+                  <label for="github">GitHub</label>
+                </div>
+                <div class="input-field col s2">
+                   <input type="checkbox" class="filled-in" id="is_working"/>
+                   <label for="is_working">Working?</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s3">
+                    <select id="time_experience">
+                        <option value="0" disabled selected>Choose your option</option>
+                    </select>
+                    <label>Tempo de Experiência</label>
+                </div>
+                <div class="input-field col s3">
+                    <select id="education">
+                        <option value="0" disabled selected>Choose your option</option>
+                    </select>
+                    <label>Educação</label>
+                </div>
+                <div class="input-field col s3">
+                    <select id="course">
+                        <option value="0" disabled selected>Choose your option</option>
+                    </select>
+                    <label>Curso</label>
+                </div>
+                <div class="input-field col s3">
+                    <select id="visa">
+                        <option value="0" disabled selected>Choose your option</option>
+                    </select>
+                    <label>Visto</label>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="input-field col s3">
+                    <select id="occupation">
+                        <option value="0" disabled selected>Choose your option</option>
+                    </select>
+                    <label>Área de Atuação</label>
+                </div>
+                   <label>Tecnologias</label>
+                 <div class="input-field col s9">
+                     <textarea id="technologies" class="materialize-textarea" style="width: 400px !important;">
+
+                     </textarea>
+                 </div>
+              </div>
+            </form>
+        </div>
+         <button class="btn center" type="submit" name="action" onclick="pageMember.save_member('{{ API_SERVICE }}');">Submit
+         </button>
+
+    </div>
+    {% block post_content %}{% endblock %}
+        {% block scripts %}
+        {{ super() }}
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="{{ SITEURL }}/theme/plugins/textext/js/textext.core.js" type="text/javascript" charset="utf-8"></script>
+		<script src="{{ SITEURL }}/theme/plugins/textext/js/textext.plugin.tags.js" type="text/javascript" charset="utf-8"></script>
+		<script src="{{ SITEURL }}/theme/plugins/textext/js/textext.plugin.autocomplete.js" type="text/javascript" charset="utf-8"></script>
+		<script src="{{ SITEURL }}/theme/plugins/textext/js/textext.plugin.ajax.js" type="text/javascript" charset="utf-8"></script>
+        <script src="{{ SITEURL }}/theme/plugins/textext/js/textext.plugin.suggestions.js" type="text/javascript" charset="utf-8"></script>
+        <script src="{{ SITEURL }}/theme/itindublin/js/member.js"></script>
+    {% endblock %}
+    <script>
+        var pageMember = PageMembersRegister;
+        pageMember.init('{{ API_SERVICE }}');
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+{% endblock %}

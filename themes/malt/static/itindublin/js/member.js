@@ -143,8 +143,9 @@ var PageMembersRegister = function () {
                 "processData": false,
                 "data": JSON.stringify(send_data)
             }).done(function (response) {
-                alert('ok');
+                alert('member registred');
                 console.log(response);
+                window.location.href = 'member'
             }).fail(function (error) {
                 alert(error.responseText);
                 console.log(error);
@@ -153,33 +154,72 @@ var PageMembersRegister = function () {
     }
 }();
 
-
-var PageMemberList = function () {
-
-    var getMembers = function (api_service) {
-        var visa_ids = [];
-        var education_ids = [];
-        var course_ids = [];
-        var occupation_ids = [];
-        var technology_ids = [];
-        $.ajax({
-            type: "GET",
-            url: api_service+"/members",
-            data: {
-                "visa_ids": JSON.stringify(visa_ids),
-                "education_ids": JSON.stringify(education_ids),
-                "course_ids": JSON.stringify(course_ids),
-                "occupation_ids": JSON.stringify(occupation_ids),
-                'technology_ids': JSON.stringify(technology_ids)
+var app = angular.module('myApp', []);
+app.config(['$interpolateProvider', function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{[{');
+  $interpolateProvider.endSymbol('}]}');
+}]);
+app.controller('myCtrl', function($scope, $http) {
+    $http({
+        url: 'http://localhost:5000/api/v1/members',
+        method: "GET",
+        params: {}
+     }).then(function(response) {
+          $scope.getMembers = response.data;
+    });
+    $http({
+        url: 'http://localhost:5000/api/v1/filter_tree',
+        method: "GET",
+        params: {}
+     }).then(function(response) {
+        $('#filters_option').jstree({ 'core' : {
+            "themes":{
+                "icons":false
+            },
+            'data' : response.data
+        },
+        'plugins' : [ "checkbox"]
+        });
+    });
+    $scope.filter_member = function () {
+        var payload = prepare_filter($("#filters_option").jstree("get_selected"));
+        if (payload.size == 0){
+            return
+        }
+        $http.get(
+            'http://localhost:5000/api/v1/members',
+            {
+                'params' : payload
             }
-            }).done(function (data) {
-                var members = data
-            })
+          ).then(function(response) {
+              $scope.getMembers = response.data;
+        });
     };
+});
 
-    return {
-        init: function (api_service) {
-            getMembers(api_service);
+function prepare_filter(filters){
+
+    var data = {
+        "visa_ids": transform_list('visa', filters),
+        "education_ids": transform_list('education', filters),
+        "course_ids": transform_list('course', filters),
+        "occupation_ids": transform_list('occupation', filters),
+        "technology_ids": transform_list('technology', filters),
+        "level_ids": transform_list('level', filters),
+        "gender_ids": transform_list('gender', filters),
+        "experience_ids": transform_list('experience', filters)
+    };
+    return data;
+}
+
+function transform_list(model, filters){
+    var model_ids = [];
+    for (var i = 0, len = filters.length; i < len; i++) {
+        if(filters[i] !== 'hidden_'+model){
+            if(filters[i].slice(filters[i].indexOf('_')+1) == model){
+                model_ids.push(parseInt(filters[i].split('_')[0]));
+            }
         }
     }
-}();
+    return JSON.stringify(model_ids)
+}
